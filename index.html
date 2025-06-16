@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+     <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <title>Countdown Timer</title>
+  </head>
+  <body>
+    <div class="center-container">
+
+      <div id="timer" class="row equal-height-row">
+        <div class="col s8">
+          <h4 class="center-align"> Countdown Timer</h4>
+          <div class="panel-card blue lighten-5 full-height">
+            <div class="panel-content">
+              <div class="time-display">
+                <span id="clockHours" class="time-span">00</span>
+                <span class="colon">:</span>
+                <span id="clockMinutes" class="time-span">25</span>
+                <span class="colon">:</span>
+                <span id="clockSeconds" class="time-span">00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s4">
+          <div class="control-buttons full-height">
+            <button type="submit" id="startBtn" class="btn green">
+              <i class="material-icons left">play_arrow</i>Start
+            </button>
+
+            <button type="submit" id="resetBtn" class="btn blue btn-reset">
+              <i class="material-icons left">refresh</i>Reset
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="valign-wrapper">
+        <p id="timerDisplay" class="left-align">Timer (00:25:00)</p>
+         <button
+            type="submit"
+            class="btn-flat blue-text text-lighten-2"
+            id="editBtn"
+          >
+            <i class="material-icons">edit</i>
+            Edit
+          </button>
+      </div>
+
+       <div id="editTimer" class="row valign-wrapper hidden">
+        <div class="input-field col s4 no-label-input">
+          <i class="material-icons prefix">schedule</i>
+          <input
+            type="number"
+            id="hours"
+            placeholder="Hours"
+            value="00"
+            min="0"
+            max="24"
+          />
+        </div>
+        <div class="input-field col s4 no-label-input">
+          <i class="material-icons prefix">access_time</i>
+          <input
+            type="number"
+            id="minutes"
+            placeholder="Minutes"
+            value="25"
+            min="0"
+            max="59"
+          />
+        </div>
+        <div class="input-field col s4 no-label-input">
+          <i class="material-icons prefix">timer</i>
+          <input
+            type="number"
+            id="seconds"
+            placeholder="Seconds"
+            value="00"
+            min="0"
+            max="59"
+          />
+        </div>
+        <div class="col s3 center-align btnSave">
+          <button
+            type="submit"
+            class="btn-flat blue-text text-lighten-1"
+            id="saveBtn"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <audio id="alarmSound" src="alarm.wav" preload="auto"></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
